@@ -911,6 +911,8 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         if shit:
             if city['shit1'] == '🛡️':
                 st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            elif city['eco1']<1:
+                st.error('Этот город разрушен')
             else:
                 masiv_shit[0] += '🛡️'
                 money -= cost_shit
@@ -918,6 +920,8 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         if shit1:
             if city['shit2'] == '🛡️':
                 st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            elif city['eco2']<1:
+                st.error('Этот город разрушен')
             else:
                 masiv_shit[1] += '🛡️️'
                 money -= cost_shit
@@ -925,6 +929,8 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         if shit2:
             if city['shit3'] == '🛡️':
                 st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            elif city['eco3']<1:
+                st.error('Этот город разрушен')
             else:
                 masiv_shit[2] += '🛡️'
                 money -= cost_shit
@@ -932,6 +938,8 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         if shit3:
             if city['shit4'] == '🛡️':
                 st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            elif city['eco4']<1:
+                st.error('Этот город разрушен')
             else:
                 masiv_shit[3] += '🛡️'
                 money -= cost_shit
