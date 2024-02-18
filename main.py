@@ -680,11 +680,18 @@ if menu == 'Принятые запросы':
 if menu=='Посещения':
     st.info('Запросы на посещения')
     db_content = request.fetch().items
-    for slash in range(0, len(db_content)+1):
+    st.write(int(db_content[len(db_content)-1]['key']),' и ',len(db_content))
+    if int(db_content[len(db_content)-1]['key'])>len(db_content):
+        for p in range(0, len(db_content)-1):
+            pp=db_content[p]['key']
+            request.update({'key': str(int(pp)-1)},pp)
+    for slash in range(0, len(db_content)):
         st.write(db_content[slash])
+        #st.write(db_content[slash]['key'])
         if st.button(f'Удалить запрос{slash}'):
             slash+=1
             request.delete(f'{slash}')
+    
 if menu=='Перевод':
     st.info('Перевод денег')
     db_content = request_money.fetch().items
@@ -851,81 +858,86 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         st.write('Какие города вы хотите улучшить?')
         st.caption('Можно улучшить только 4 города за раунд')
         if count_up<4 and city['eco1']>0:
-            col1,col2,col3,col4,col5,col6,col7,col8=st.columns(8)
-            up = col1.checkbox(f'{city_1}')
+            up = st.checkbox(f'{city_1}')
             if up:
                 masiv_up[0] += 10
                 money -= cost_up_city
                 count_up += 1
                 if count_up<4:
-                    x = col2.checkbox(f'Улучшить {city_1} 2 раза?')
+                    x = st.checkbox(f'Улучшить {city_1} 2 раза?')
                     if x:
                         masiv_up[0] += 10
                         money -= cost_up_city
                         count_up += 1
         if count_up<4 and city['eco2']>0:
-            col1,col2,col3,col4,col5,col6,col7,col8=st.columns(8)
-            up1 = col1.checkbox(f'{city_2}')
+            up1 = st.checkbox(f'{city_2}')
             if up1:
                 masiv_up[1] += 10
                 money -= cost_up_city
                 count_up+=1
                 if count_up<4:
-                    x1 = col2.checkbox(f'Улучшить {city_2} 2 раза?')
+                    x1 = st.checkbox(f'Улучшить {city_2} 2 раза?')
                     if x1:
                         masiv_up[1] += 10
                         money -= cost_up_city
                         count_up+=1
         if count_up<4 and city['eco3']>0:
-            col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
-            up2 = col1.checkbox(f'{city_3}')
+            up2 = st.checkbox(f'{city_3}')
             if up2:
                 masiv_up[2] += 10
                 money -= cost_up_city
                 count_up+=1
                 if count_up<4:
-                    x2 = col2.checkbox(f'Улучшить {city_3} 2 раза?')
+                    x2 = st.checkbox(f'Улучшить {city_3} 2 раза?')
                     if x2:
                         masiv_up[2] += 10
                         money -= cost_up_city
                         count_up+=1
         if count_up<4 and city['eco4']>0:
-            col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
-            up3 = col1.checkbox(f'{city_4}')
+            up3 = st.checkbox(f'{city_4}')
             if up3:
                 masiv_up[3] += 10
                 money -= cost_up_city
                 count_up+=1
                 if count_up<4:
-                    x3 = col2.checkbox(f'Улучшить {city_4} 2 раза?')
+                    x3 = st.checkbox(f'Улучшить {city_4} 2 раза?')
                     if x3:
                         masiv_up[3] += 10
                         money -= cost_up_city
                         count_up+=1
 
         st.write('На какие города установим щиты?')
-        if city['shit1'] != '🛡️':
-            shit = st.checkbox(f'{city_1}  ')
-            if shit:
-                masiv_shit[0] += ' 🛡️'
+        shit = st.checkbox(f'{city_1}  ')
+        if shit:
+            if city['shit1'] == '🛡️':
+                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            else:
+                masiv_shit[0] += '🛡️'
                 money -= cost_shit
-        if city['shit2'] != '🛡️':
-            shit1 = st.checkbox(f'{city_2} ')
-            if shit1:
+        shit1 = st.checkbox(f'{city_2} ')
+        if shit1:
+            if city['shit2'] == '🛡️':
+                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            else:
                 masiv_shit[1] += '🛡️️'
                 money -= cost_shit
-        if city['shit3'] != '🛡️':
-            shit2 = st.checkbox(f'{city_3} ')
-            if shit2:
+        shit2 = st.checkbox(f'{city_3} ')
+        if shit2:
+            if city['shit3'] == '🛡️':
+                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            else:
                 masiv_shit[2] += '🛡️'
                 money -= cost_shit
-        if city['shit4'] != '🛡️':
-            shit3 = st.checkbox(f'{city_4} ')
-            if shit3:
+        shit3 = st.checkbox(f'{city_4} ')
+        if shit3:
+            if city['shit4'] == '🛡️':
+                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
+            else:
                 masiv_shit[3] += '🛡️'
                 money -= cost_shit
         if city['reserch'] == 1:
-            number = st.slider('Сколько ракет делаем?', 0,30,0)
+            number = st.number_input('Сколько ракет делаем?', 0)
+            st.write('Вы получите в следующие количество ракет', number)
             money -= 500 * number
         else:
             st.write(' ')
@@ -964,11 +976,10 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
 
     if menu == 'Стартовая страница':
         st.title(f'Вы играете за {title_name}')
-        col1, col2, col3, col4= st.columns(4)
-        col1.metric('💸Деньги:', money)
-        col2.metric('🚀Ракеты:', city['roket'])
-        col3.metric('Санкции наложеные вами:', city['sunks_of_you'])
-        col4.metric('Санкции наложеные на вас:', city['sunks_for_you'])
+        st.write('Деньги:', money)
+        st.write('Ракеты:', city['roket'])
+        st.write('Санкции наложеные вами:', city['sunks_of_you'])
+        st.write('Санкции наложеные на вас:', city['sunks_for_you'])
         col1, col2, col3, col4 = st.columns(4)
         col1.metric(masiv_home[1] + city['shit1'] + f'{city_1}', '⚙️' + str(city['up1']) + '%' + ' 🌳 ' + str(city['eco1']) + '%')
         col2.metric(masiv_home[2] + city['shit2'] + f'{city_2}', '⚙️' + str(city['up2']) + '%' + ' 🌳 ' + str(city['eco2']) + '%')
