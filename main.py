@@ -684,7 +684,8 @@ if menu=='Посещения':
     if int(db_content[len(db_content)-1]['key'])>len(db_content):
         for p in range(0, len(db_content)-1):
             pp=db_content[p]['key']
-            request.update({'key': str(int(pp)-1)},'3')
+            trtrtr=str(int(pp)-1)
+            request.update({'key': trtrtr},'3')
     for slash in range(0, len(db_content)):
         st.write(db_content[slash])
         #st.write(db_content[slash]['key'])
