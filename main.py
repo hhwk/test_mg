@@ -914,7 +914,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
             elif city['eco1']<1:
                 st.error('Этот город разрушен')
             else:
-                masiv_shit[0] += '🛡️'
+                masiv_shit[0] = '🛡️'
                 money -= cost_shit
         shit1 = st.checkbox(f'{city_2} ')
         if shit1:
@@ -923,7 +923,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
             elif city['eco2']<1:
                 st.error('Этот город разрушен')
             else:
-                masiv_shit[1] += '🛡️️'
+                masiv_shit[1] = '🛡️️'
                 money -= cost_shit
         shit2 = st.checkbox(f'{city_3} ')
         if shit2:
@@ -932,7 +932,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
             elif city['eco3']<1:
                 st.error('Этот город разрушен')
             else:
-                masiv_shit[2] += '🛡️'
+                masiv_shit[2] = '🛡️'
                 money -= cost_shit
         shit3 = st.checkbox(f'{city_4} ')
         if shit3:
@@ -942,7 +942,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                 st.error('Этот город разрушен')
                 #11
             else:
-                masiv_shit[3] += '🛡️'
+                masiv_shit[3] = '🛡️'
                 money -= cost_shit
         if city['reserch'] == 1:
             number = st.number_input('Сколько ракет делаем?', 0)
