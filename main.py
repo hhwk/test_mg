@@ -680,18 +680,12 @@ if menu == 'Принятые запросы':
 if menu=='Посещения':
     st.info('Запросы на посещения')
     db_content = request.fetch().items
-    st.write(int(db_content[len(db_content)-1]['key']),' и ',len(db_content))
-    if int(db_content[len(db_content)-1]['key'])>len(db_content):
-        for p in range(0, len(db_content)-1):
-            pp=db_content[p]['key']
-            trtrtr=str(int(pp)-1)
-            request.update({'key': '1'},'3')
     for slash in range(0, len(db_content)):
         st.write(db_content[slash])
-        #st.write(db_content[slash]['key'])
         if st.button(f'Удалить запрос{slash}'):
+            forgot=db_content[slash]['key']
             slash+=1
-            request.delete(f'{slash}')
+            request.delete(f'{forgot}')
     
 if menu=='Перевод':
     st.info('Перевод денег')
