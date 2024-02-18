@@ -940,6 +940,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                 st.error('Дружок, у нас так не принято. По 1 щиту на город...')
             elif city['eco4']<1:
                 st.error('Этот город разрушен')
+                #11
             else:
                 masiv_shit[3] += '🛡️'
                 money -= cost_shit
