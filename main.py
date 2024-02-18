@@ -785,7 +785,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                 if st.button('Отправить запрос'):
                     nowtime = str(current_datetime.hour) + ':' + str(current_datetime.minute) + ':' + str(current_datetime.second) + ' '
                     request_content=request.fetch().items
-                    keys=str(request_content[str(len(request_content)-1)]['key']+1)
+                    keys=str(int(request_content[len(request_content)-1]['key'])+1)
                     request.put({'key':f'{keys}','info': f'{nowtime}{Country_Name}','come': visit})
                     st.success('Запрос на посещение отправлен')
         else:
