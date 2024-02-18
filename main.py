@@ -1,5 +1,6 @@
 import streamlit as st
 #Тест гита
+#123
 from deta import Deta
 from datetime import datetime
 #from PIL import Image
