@@ -902,13 +902,9 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         count_up+=1
 
         st.write('На какие города установим щиты?')
-        shit = st.checkbox(f'{city_1}  ')
-        if shit:
-            if city['shit1'] == '🛡️':
-                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
-            elif city['eco1']<1:
-                st.error('Этот город разрушен')
-            else:
+        if city['eco1']>0 and city['shit1']==' ':
+            shit = st.checkbox(f'{city_1}  ')
+            if shit:
                 masiv_shit[0] = '🛡️'
                 money -= cost_shit
         shit1 = st.checkbox(f'{city_2} ')
