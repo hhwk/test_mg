@@ -907,32 +907,19 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
             if shit:
                 masiv_shit[0] = '🛡️'
                 money -= cost_shit
-        shit1 = st.checkbox(f'{city_2} ')
-        if shit1:
-            if city['shit2'] == '🛡️':
-                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
-            elif city['eco2']<1:
-                st.error('Этот город разрушен')
-            else:
+        if city['eco2'] > 0 and city['shit2'] == ' ':
+            shit1 = st.checkbox(f'{city_2} ')
+            if shit1:
                 masiv_shit[1] = '🛡️️'
                 money -= cost_shit
-        shit2 = st.checkbox(f'{city_3} ')
-        if shit2:
-            if city['shit3'] == '🛡️':
-                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
-            elif city['eco3']<1:
-                st.error('Этот город разрушен')
-            else:
+        if city['eco3'] > 0 and city['shit3'] == ' ':
+            shit2 = st.checkbox(f'{city_3} ')
+            if shit2:
                 masiv_shit[2] = '🛡️'
                 money -= cost_shit
-        shit3 = st.checkbox(f'{city_4} ')
-        if shit3:
-            if city['shit4'] == '🛡️':
-                st.error('Дружок, у нас так не принято. По 1 щиту на город...')
-            elif city['eco4']<1:
-                st.error('Этот город разрушен')
-                #11
-            else:
+        if city['eco4'] > 0 and city['shit4'] == ' ':
+            shit3 = st.checkbox(f'{city_4} ')
+            if shit3:
                 masiv_shit[3] = '🛡️'
                 money -= cost_shit
         if city['reserch'] == 1:
