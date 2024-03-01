@@ -735,7 +735,6 @@ if menu=='Логи':
 
 
 if Country_Name!='vjcrdf11' and Country_Name!='':
-    st.write(Country_Name)
     menu = st.sidebar.selectbox('Меню', ('Стартовая страница', 'Улучшения', 'Запуск ракет', 'Посещения', 'Гуманитарная помощь', 'INFO'))
     if pp['Atention'] != '':
         st.sidebar.error(pp['Atention'], icon="🚨")
