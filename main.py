@@ -975,9 +975,9 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         sr_country1=((country1['eco1']+country1['eco2']+country1['eco3']+country1['eco4'])/4) - (country1['roket']/2)
         sr_country2=((country2['eco1'] + country2['eco2'] + country2['eco3'] + country2['eco4']) / 4)  - (country2['roket']/2)
         sr_country3=((country3['eco1'] + country3['eco2'] + country3['eco3'] + country3['eco4']) / 4) - (country3['roket']/2)
-        sr_country6=((country6['eco1'] + country6['eco2'] + country6['eco3'] + country6['eco4']) / 4) - (country4['roket']/2)
-        sr_country4=((country4['eco1'] + country4['eco2'] + country4['eco3'] + country4['eco4']) / 4) - (country5['roket']/2)
-        sr_country5=((country5['eco1'] + country5['eco2'] + country5['eco3'] + country5['eco4']) / 4) - (country6['roket']/2)
+        sr_country6=((country6['eco1'] + country6['eco2'] + country6['eco3'] + country6['eco4']) / 4) - (country6['roket']/2)
+        sr_country4=((country4['eco1'] + country4['eco2'] + country4['eco3'] + country4['eco4']) / 4) - (country4['roket']/2)
+        sr_country5=((country5['eco1'] + country5['eco2'] + country5['eco3'] + country5['eco4']) / 4) - (country5['roket']/2)
         df=pd.DataFrame(
             [
                 {'Страна':'Германия',
