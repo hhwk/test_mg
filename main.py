@@ -899,7 +899,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         reserch1 = 0
         st.write('Деньги:', money)
         st.write('Какие города вы хотите улучшить?')
-        st.sidebar.caption(f'Улучшение города стоит {cost_up_city}')
+        st.caption(f'Улучшение города стоит {cost_up_city}')
         st.caption('Можно улучшить только 4 города за раунд')
         if count_up<4 and city['eco1']>0:
             up = st.checkbox(f'{city_1}')
@@ -951,7 +951,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         count_up+=1
 
         st.write('На какие города установим щиты?')
-        st.sidebar.caption(f'Установка щита стоит {cost_shit}')
+        st.caption(f'Установка щита стоит {cost_shit}')
         if city['eco1']>0 and city['shit1']==' ':
             shit = st.checkbox(f'{city_1}  ')
             if shit:
@@ -975,10 +975,12 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         if city['reserch'] == 1:
             number = st.number_input('Сколько ракет делаем?', 0)
             st.write('Вы получите в следующие количество ракет', number)
+            st.caption('1 ракета стоит 500')
             money -= 500 * number
         else:
             st.write(' ')
             reserch = st.checkbox('Изучить ядерные ракеты')
+            st.caption('Разработка ракет стоит 500')
             st.write(' ')
             if reserch:
                 money -= 500
