@@ -9,7 +9,7 @@ import pandas as pd
 #import numpy as np
 import re
 import webbrowser
-#
+
 st.set_page_config(
 
     page_title="Мировое господство",
