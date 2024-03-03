@@ -191,7 +191,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
     attak5 = []
     cost_up_city=200
     cost_shit=350
-    for i_home in range(1,4):
+    for i_home in range(1,5):
         if city[f'eco{i_home}']<1:
             masiv_home[i_home]='🏚️'
         else:
