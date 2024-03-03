@@ -417,6 +417,8 @@ if menu == 'Принятые запросы':
                             if country2['shit1']=='🛡️':
                                 ec1-=20
                                 shit_end1 = ' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1=0
                                 up1=0
@@ -425,6 +427,8 @@ if menu == 'Принятые запросы':
                             if country2['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end2 = ' '
+                            elif ec2<1:
+                                ec2-0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -433,6 +437,8 @@ if menu == 'Принятые запросы':
                             if country2['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end3 = ' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -441,6 +447,8 @@ if menu == 'Принятые запросы':
                             if country2['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end4 = ' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
@@ -457,6 +465,8 @@ if menu == 'Принятые запросы':
                             if country1['shit1']== '🛡️':
                                 ec1 -= 20
                                 shit_end1 = ' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1 = 0
                                 up1 = 0
@@ -465,6 +475,8 @@ if menu == 'Принятые запросы':
                             if country1['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end2 = ' '
+                            elif ec2<1:
+                                ec2-=0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -473,6 +485,8 @@ if menu == 'Принятые запросы':
                             if country1['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end3 = ' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -481,6 +495,8 @@ if menu == 'Принятые запросы':
                             if country1['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end4 = ' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
@@ -499,6 +515,8 @@ if menu == 'Принятые запросы':
                             if country3['shit1']== '🛡️':
                                 ec1 -= 20
                                 shit_end1 = ' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1 = 0
                                 up1 = 0
@@ -507,6 +525,8 @@ if menu == 'Принятые запросы':
                             if country3['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end2 = ' '
+                            elif ec2<1:
+                                ec2-=0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -515,6 +535,8 @@ if menu == 'Принятые запросы':
                             if country3['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end3 = ' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -523,6 +545,8 @@ if menu == 'Принятые запросы':
                             if country3['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end4 = ' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
@@ -541,6 +565,8 @@ if menu == 'Принятые запросы':
                             if country4['shit1']== '🛡️':
                                 ec1 -= 20
                                 shit_end1 = ' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1 = 0
                                 up1 = 0
@@ -549,6 +575,8 @@ if menu == 'Принятые запросы':
                             if country4['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end2 = ' '
+                            elif ec2<1:
+                                ec2-=0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -557,6 +585,8 @@ if menu == 'Принятые запросы':
                             if country4['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end3 = ' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -565,6 +595,8 @@ if menu == 'Принятые запросы':
                             if country4['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end4 = ' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
@@ -583,6 +615,8 @@ if menu == 'Принятые запросы':
                             if country5['shit1']== '🛡️':
                                 ec1 -= 20
                                 shit_end1=' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1 = 0
                                 up1 = 0
@@ -591,6 +625,8 @@ if menu == 'Принятые запросы':
                             if country5['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end2=' '
+                            elif ec2<1:
+                                ec2-=0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -599,6 +635,8 @@ if menu == 'Принятые запросы':
                             if country5['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end3=' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -607,6 +645,8 @@ if menu == 'Принятые запросы':
                             if country5['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end4=' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
@@ -624,6 +664,8 @@ if menu == 'Принятые запросы':
                             if country6['shit1']== '🛡️':
                                 ec1 -= 20
                                 shit_end1 = ' '
+                            elif ec1<1:
+                                ec1-=0.5
                             else:
                                 ec1 = 0
                                 up1 = 0
@@ -632,6 +674,8 @@ if menu == 'Принятые запросы':
                             if country6['shit2']== '🛡️':
                                 ec2 -= 20
                                 shit_end1 = ' '
+                            elif ec2<1:
+                                ec2-=0.5
                             else:
                                 ec2 = 0
                                 up2 = 0
@@ -640,6 +684,8 @@ if menu == 'Принятые запросы':
                             if country6['shit3']== '🛡️':
                                 ec3 -= 20
                                 shit_end1 = ' '
+                            elif ec3<1:
+                                ec3-=0.5
                             else:
                                 ec3 = 0
                                 up3 = 0
@@ -648,6 +694,8 @@ if menu == 'Принятые запросы':
                             if country6['shit4']== '🛡️':
                                 ec4 -= 20
                                 shit_end1 = ' '
+                            elif ec4<1:
+                                ec4-=0.5
                             else:
                                 ec4 = 0
                                 up4 = 0
