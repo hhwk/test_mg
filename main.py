@@ -392,7 +392,7 @@ if menu == 'Принятые запросы':
                     if country6['shit4']=='🛡️':
                         shit_end[3] = '🛡️'
                     Global.update({'money': money_end, 'reserch': reserch, 'roket': country6['roket']+roket_end,
-                                   'shit1': shit_end[0]+country6['shit1'], 'shit2': shit_end[1]+country6['shit2'], 'shit3': shit_end[2]+country6['shit3'], 'shit4': shit_end[3]+country6['shit4'],
+                                   'shit1': shit_end[0], 'shit2': shit_end[1], 'shit3': shit_end[2], 'shit4': shit_end[3],
                                    'up1': country6['up1'] + up_end1, 'up2': country6['up2'] + up_end2,
                                    'up3': country6['up3'] + up_end3,'up4': country6['up4'] + up_end4,
                                    'eco1': country6['eco1'] + up_end1, 'eco2': country6['eco2'] + up_end2,
