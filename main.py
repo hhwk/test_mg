@@ -830,7 +830,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         nowtime = str(current_datetime.hour) + ':' + str(current_datetime.minute) + ':' + str(current_datetime.second) + ' '
                         Attak_content=Attak.fetch().items
                         keys=len(Attak_content)+1
-                        Attak.put({'key':f'{keys}','info': f'{nowtime}{Country_Name}', 'Германия': attak, 'Норвегия': attak1,'Таджикистан': attak2, 'Швеция': attak3,
+                        Attak.put({'key':f'{keys}','info': f'{nowtime}{Country_Name}', 'Германия': attak, 'Норвегия': attak1,'Таджикистан': attak2, 'Турция': attak3,
                                    'Тайланд': attak4,'Япония':attak5,'final_roket':final_roket})
                         log_content=log.fetch().items
                         keys1=len(log_content)+1
