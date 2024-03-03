@@ -180,7 +180,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         st.sidebar.warning(city['sms'],icon="⚠️")
     st.sidebar.caption('Автор MangoVirus')
 
-    masiv_home=['j',"j",'h',"h"]
+    masiv_home=['j',"j",'h',"h",'h']
     masiv_up = [0, 0, 0, 0]
     masiv_shit = [' ', ' ', ' ', ' ']
     attak = []
