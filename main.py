@@ -76,7 +76,7 @@ with st.sidebar.container():
     col1, col2, col3, col4= st.columns(4)
 
     with col2:
-        st.image('https://cdn.discordapp.com/attachments/890188503047077928/1070451124869533758/066443762463369c.png', width=128)
+        st.image('https://cdn.discordapp.com/attachments/890188503047077928/1070451124869533758/066443762463369c.png?ex=65f2164c&is=65dfa14c&hm=64806b58be52484d5a471b56f1c23e16a7111ced50bf8a0eaf40cf5aff31c855&', width=128)
 
 Country_Name=""
 menu=''
