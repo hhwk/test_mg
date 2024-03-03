@@ -397,6 +397,7 @@ if menu == 'Принятые запросы':
                                    'up3': country6['up3'] + up_end3,'up4': country6['up4'] + up_end4,
                                    'eco1': country6['eco1'] + up_end1, 'eco2': country6['eco2'] + up_end2,
                                    'eco3': country6['eco3'] + up_end3, 'eco4': country6['eco4'] + up_end4}, 'Tayland')
+                    #
                 wait.delete(f'{end}')
 
         st.success('Улучшения отправлены')
