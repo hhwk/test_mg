@@ -291,7 +291,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         st.write('Какие города вы хотите улучшить?')
         st.caption(f'Улучшение города стоит {cost_up_city}')
         st.caption('Можно улучшить только 4 города за раунд')
-        if count_up<4 and city['eco1']>0:
+        if count_up<4 and city['eco'][0]>0:
             up = st.checkbox(f'{city_1}')
             if up:
                 masiv_up[0] += 10
@@ -303,7 +303,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         masiv_up[0] += 10
                         money -= cost_up_city
                         count_up += 1
-        if count_up<4 and city['eco2']>0:
+        if count_up<4 and city['eco'][1]>0:
             up1 = st.checkbox(f'{city_2}')
             if up1:
                 masiv_up[1] += 10
@@ -315,7 +315,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         masiv_up[1] += 10
                         money -= cost_up_city
                         count_up+=1
-        if count_up<4 and city['eco3']>0:
+        if count_up<4 and city['eco'][2]>0:
             up2 = st.checkbox(f'{city_3}')
             if up2:
                 masiv_up[2] += 10
@@ -327,7 +327,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
                         masiv_up[2] += 10
                         money -= cost_up_city
                         count_up+=1
-        if count_up<4 and city['eco4']>0:
+        if count_up<4 and city['eco'][3]>0:
             up3 = st.checkbox(f'{city_4}')
             if up3:
                 masiv_up[3] += 10
