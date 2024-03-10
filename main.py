@@ -414,12 +414,12 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         col2.metric(masiv_home[2] + city['shit'][1] + f'{city_2}', '⚙️' + str(city['up'][1]) + '%' + ' 🌳 ' + str(city['eco'][1]) + '%')
         col3.metric(masiv_home[3] + city['shit'][2] + f'{city_3}', '⚙️' + str(city['up'][2]) + '%' + ' 🌳 ' + str(city['eco'][2]) + '%')
         col4.metric(masiv_home[4] + city['shit'][3] + f'{city_4}', '⚙️' + str(city['up'][3]) + '%' + ' 🌳 ' + str(city['eco'][3]) + '%')
-        sr_country1=((country1['eco'][0]+country1['eco'][1]+country1['eco'][2]+country1['eco'][3])/4) - (country1['roket']/2)
-        sr_country2=((country2['eco'][0] + country2['eco'][1] + country2['eco'][2] + country2['eco'][3]) / 4)  - (country2['roket']/2)
-        sr_country3=((country3['eco'][0] + country3['eco'][1] + country3['eco'][2] + country3['eco'][3]) / 4) - (country3['roket']/2)
-        sr_country6=((country6['eco'][0] + country6['eco'][1] + country6['eco'][2] + country6['eco'][3]) / 4) - (country6['roket']/2)
-        sr_country4=((country4['eco'][0] + country4['eco'][1] + country4['eco'][2] + country4['eco'][3]) / 4) - (country4['roket']/2)
-        sr_country5=((country5['eco'][0] + country5['eco'][1] + country5['eco'][2] + country5['eco'][3]) / 4) - (country5['roket']/2)
+        sr_country1=((str(country1['eco'][0])+str(country1['eco'][1])+str(country1['eco'][2])+str(country1['eco'][3]))/4) - (country1['roket']/2)
+        sr_country2=((str(country2['eco'][0]) + str(country2['eco'][1]) + str(country2['eco'][2]) + str(country2['eco'][3])) / 4)  - (country2['roket']/2)
+        sr_country3=((str(country3['eco'][0]) + str(country3['eco'][1]) + str(country3['eco'][2]) + str(country3['eco'][3])) / 4) - (country3['roket']/2)
+        sr_country6=((str(country6['eco'][0]) + str(country6['eco'][1]) + str(country6['eco'][2]) + str(country6['eco'][3])) / 4) - (country6['roket']/2)
+        sr_country4=((str(country4['eco'][0]) + str(country4['eco'][1]) + str(country4['eco'][2]) + str(country4['eco'][3])) / 4) - (country4['roket']/2)
+        sr_country5=((str(country5['eco'][0]) + str(country5['eco'][1]) + str(country5['eco'][2]) + str(country5['eco'][3])) / 4) - (country5['roket']/2)
         df=pd.DataFrame(
             [
                 {'Страна':'Германия',
