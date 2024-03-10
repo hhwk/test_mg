@@ -182,7 +182,7 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
 
     masiv_home=['j',"j",'h',"h",'h']
     masiv_up = [0, 0, 0, 0]
-    masiv_shit = [' ', ' ', ' ', ' ']
+    masiv_shit = ['', '', '', '']
     attak = []
     attak1 = []
     attak2 = []
@@ -342,22 +342,22 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
 
         st.write('На какие города установим щиты?')
         st.caption(f'Установка щита стоит {cost_shit}')
-        if city['eco1']>0 and city['shit1']==' ':
+        if city['eco'][0]>0 and city['shit'][0]=='':
             shit = st.checkbox(f'{city_1}  ')
             if shit:
                 masiv_shit[0] = '🛡️'
                 money -= cost_shit
-        if city['eco2'] > 0 and city['shit2'] == ' ':
+        if city['eco'][1] > 0 and city['shit'][1] == '':
             shit1 = st.checkbox(f'{city_2} ')
             if shit1:
                 masiv_shit[1] = '🛡️️'
                 money -= cost_shit
-        if city['eco3'] > 0 and city['shit3'] == ' ':
+        if city['eco'][2] > 0 and city['shit'][2] == '':
             shit2 = st.checkbox(f'{city_3} ')
             if shit2:
                 masiv_shit[2] = '🛡️'
                 money -= cost_shit
-        if city['eco4'] > 0 and city['shit4'] == ' ':
+        if city['eco'][3] > 0 and city['shit'][3] == '':
             shit3 = st.checkbox(f'{city_4} ')
             if shit3:
                 masiv_shit[3] = '🛡️'
@@ -381,10 +381,10 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
 
         st.write('Ваш баланс после операции:', money)
         col1, col2, col3, col4= st.columns(4)
-        col1.metric(masiv_home[1] + city['shit1'] + masiv_shit[0] + f'{city_1}','⚙️' + str(city['up1']+masiv_up[0]) + '%' + ' 🌳 ' + str(city['eco1']+masiv_up[0]) + '%', masiv_up[0])
-        col2.metric(masiv_home[2] + city['shit2'] + masiv_shit[1] + f'{city_2}','⚙️' + str(city['up2']+masiv_up[1]) + '%' + ' 🌳 ' + str(city['eco2']+masiv_up[1]) + '%', masiv_up[1])
-        col3.metric(masiv_home[3] + city['shit3'] + masiv_shit[2] + f'{city_3}','⚙️' + str(city['up3']+masiv_up[2]) + '%' + ' 🌳 ' + str(city['eco3']+masiv_up[2]) + '%', masiv_up[2])
-        col4.metric(masiv_home[4] + city['shit4'] + masiv_shit[3] + f'{city_4}','⚙️' + str(city['up4']+masiv_up[3]) + '%' + ' 🌳 ' + str(city['eco4']+masiv_up[3]) + '%', masiv_up[3])
+        col1.metric(masiv_home[1] + city['shit'][0] + masiv_shit[0] + f'{city_1}','⚙️' + str(city['up'][0]+masiv_up[0]) + '%' + ' 🌳 ' + str(city['eco'][0]+masiv_up[0]) + '%', masiv_up[0])
+        col2.metric(masiv_home[2] + city['shit'][1] + masiv_shit[1] + f'{city_2}','⚙️' + str(city['up'][1]+masiv_up[1]) + '%' + ' 🌳 ' + str(city['eco'][1]+masiv_up[1]) + '%', masiv_up[1])
+        col3.metric(masiv_home[3] + city['shit'][2] + masiv_shit[2] + f'{city_3}','⚙️' + str(city['up'][2]+masiv_up[2]) + '%' + ' 🌳 ' + str(city['eco'][2]+masiv_up[2]) + '%', masiv_up[2])
+        col4.metric(masiv_home[4] + city['shit'][3] + masiv_shit[3] + f'{city_4}','⚙️' + str(city['up'][3]+masiv_up[3]) + '%' + ' 🌳 ' + str(city['eco'][3]+masiv_up[3]) + '%', masiv_up[3])
 
         if lid==1:
             if st.button('Отправить данные'):
@@ -410,53 +410,53 @@ if Country_Name!='vjcrdf11' and Country_Name!='':
         #st.write('Санкции наложеные вами:', city['sunks_of_you'])
         #st.write('Санкции наложеные на вас:', city['sunks_for_you'])
         col1, col2, col3, col4 = st.columns(4)
-        col1.metric(masiv_home[1] + city['shit1'] + f'{city_1}', '⚙️' + str(city['up1']) + '%' + ' 🌳 ' + str(city['eco1']) + '%')
-        col2.metric(masiv_home[2] + city['shit2'] + f'{city_2}', '⚙️' + str(city['up2']) + '%' + ' 🌳 ' + str(city['eco2']) + '%')
-        col3.metric(masiv_home[3] + city['shit3'] + f'{city_3}', '⚙️' + str(city['up3']) + '%' + ' 🌳 ' + str(city['eco3']) + '%')
-        col4.metric(masiv_home[4] + city['shit4'] + f'{city_4}', '⚙️' + str(city['up4']) + '%' + ' 🌳 ' + str(city['eco4']) + '%')
-        sr_country1=((country1['eco1']+country1['eco2']+country1['eco3']+country1['eco4'])/4) - (country1['roket']/2)
-        sr_country2=((country2['eco1'] + country2['eco2'] + country2['eco3'] + country2['eco4']) / 4)  - (country2['roket']/2)
-        sr_country3=((country3['eco1'] + country3['eco2'] + country3['eco3'] + country3['eco4']) / 4) - (country3['roket']/2)
-        sr_country6=((country6['eco1'] + country6['eco2'] + country6['eco3'] + country6['eco4']) / 4) - (country6['roket']/2)
-        sr_country4=((country4['eco1'] + country4['eco2'] + country4['eco3'] + country4['eco4']) / 4) - (country4['roket']/2)
-        sr_country5=((country5['eco1'] + country5['eco2'] + country5['eco3'] + country5['eco4']) / 4) - (country5['roket']/2)
+        col1.metric(masiv_home[1] + city['shit'][0] + f'{city_1}', '⚙️' + str(city['up'][0]) + '%' + ' 🌳 ' + str(city['eco'][0]) + '%')
+        col2.metric(masiv_home[2] + city['shit'][1] + f'{city_2}', '⚙️' + str(city['up'][1]) + '%' + ' 🌳 ' + str(city['eco'][1]) + '%')
+        col3.metric(masiv_home[3] + city['shit'][2] + f'{city_3}', '⚙️' + str(city['up'][2]) + '%' + ' 🌳 ' + str(city['eco'][2]) + '%')
+        col4.metric(masiv_home[4] + city['shit'][3] + f'{city_4}', '⚙️' + str(city['up'][3]) + '%' + ' 🌳 ' + str(city['eco'][3]) + '%')
+        sr_country1=((country1['eco'][0]+country1['eco'][1]+country1['eco'][2]+country1['eco'][3])/4) - (country1['roket']/2)
+        sr_country2=((country2['eco'][0] + country2['eco'][1] + country2['eco'][2] + country2['eco'][3]) / 4)  - (country2['roket']/2)
+        sr_country3=((country3['eco'][0] + country3['eco'][1] + country3['eco'][2] + country3['eco'][3]) / 4) - (country3['roket']/2)
+        sr_country6=((country6['eco'][0] + country6['eco'][1] + country6['eco'][2] + country6['eco'][3]) / 4) - (country6['roket']/2)
+        sr_country4=((country4['eco'][0] + country4['eco'][1] + country4['eco'][2] + country4['eco'][3]) / 4) - (country4['roket']/2)
+        sr_country5=((country5['eco'][0] + country5['eco'][1] + country5['eco'][2] + country5['eco'][3]) / 4) - (country5['roket']/2)
         df=pd.DataFrame(
             [
                 {'Страна':'Германия',
-                 'Первый город':'⚙️' + str(country1['up1']) + '%' + ' 🌳 ' + str(country1['eco1']) + '%',
-                 'Второй город':'⚙️' + str(country1['up2']) + '%' + ' 🌳 '+ str(country1['eco2']) + '%',
-                 'Третий город':'⚙️' + str(country1['up3']) + '%' + ' 🌳 ' + str(country1['eco3']) + '%',
-                 'Четвертый город':'⚙️' + str(country1['up4']) + '%' + ' 🌳 ' + str(country1['eco4']) + '%',
+                 'Первый город':'⚙️' + str(country1['up'][0]) + '%' + ' 🌳 ' + str(country1['eco'][0]) + '%',
+                 'Второй город':'⚙️' + str(country1['up'][1]) + '%' + ' 🌳 '+ str(country1['eco'][1]) + '%',
+                 'Третий город':'⚙️' + str(country1['up'][2]) + '%' + ' 🌳 ' + str(country1['eco'][2]) + '%',
+                 'Четвертый город':'⚙️' + str(country1['up'][3]) + '%' + ' 🌳 ' + str(country1['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country1},
                 {'Страна': 'Таджикистан',
-                 'Первый город': '⚙️' + str(country2['up1']) + '%' + ' 🌳 ' + str(country2['eco1']) + '%',
-                 'Второй город': '⚙️' + str(country2['up2']) + '%' + ' 🌳 ' + str(country2['eco2']) + '%',
-                 'Третий город': '⚙️' + str(country2['up3']) + '%' + ' 🌳 ' + str(country2['eco3']) + '%',
-                 'Четвертый город': '⚙️' + str(country2['up4']) + '%' + ' 🌳 ' + str(country2['eco4']) + '%',
+                 'Первый город': '⚙️' + str(country2['up'][0]) + '%' + ' 🌳 ' + str(country2['eco'][0]) + '%',
+                 'Второй город': '⚙️' + str(country2['up'][1]) + '%' + ' 🌳 ' + str(country2['eco'][1]) + '%',
+                 'Третий город': '⚙️' + str(country2['up'][2]) + '%' + ' 🌳 ' + str(country2['eco'][2]) + '%',
+                 'Четвертый город': '⚙️' + str(country2['up'][3]) + '%' + ' 🌳 ' + str(country2['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country2},
                 {'Страна': 'Норвегия',
-                 'Первый город': '⚙️' + str(country3['up1']) + '%' + ' 🌳 ' + str(country3['eco1']) + '%',
-                 'Второй город': '⚙️' + str(country3['up2']) + '%' + ' 🌳 ' + str(country3['eco2']) + '%',
-                 'Третий город': '⚙️' + str(country3['up3']) + '%' + ' 🌳 ' + str(country3['eco3']) + '%',
-                 'Четвертый город': '⚙️' + str(country3['up4']) + '%' + ' 🌳 ' + str(country3['eco4']) + '%',
+                 'Первый город': '⚙️' + str(country3['up'][0]) + '%' + ' 🌳 ' + str(country3['eco'][0]) + '%',
+                 'Второй город': '⚙️' + str(country3['up'][1]) + '%' + ' 🌳 ' + str(country3['eco'][1]) + '%',
+                 'Третий город': '⚙️' + str(country3['up'][2]) + '%' + ' 🌳 ' + str(country3['eco'][2]) + '%',
+                 'Четвертый город': '⚙️' + str(country3['up'][3]) + '%' + ' 🌳 ' + str(country3['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country3},
                 {'Страна': 'Тайланд',
-                 'Первый город': '⚙️' + str(country6['up1']) + '%' + ' 🌳 ' + str(country6['eco1']) + '%',
-                 'Второй город': '⚙️' + str(country6['up2']) + '%' + ' 🌳 ' + str(country6['eco2']) + '%',
-                 'Третий город': '⚙️' + str(country6['up3']) + '%' + ' 🌳 ' + str(country6['eco3']) + '%',
-                 'Четвертый город': '⚙️' + str(country6['up4']) + '%' + ' 🌳 ' + str(country6['eco4']) + '%',
+                 'Первый город': '⚙️' + str(country6['up'][0]) + '%' + ' 🌳 ' + str(country6['eco'][0]) + '%',
+                 'Второй город': '⚙️' + str(country6['up'][1]) + '%' + ' 🌳 ' + str(country6['eco'][1]) + '%',
+                 'Третий город': '⚙️' + str(country6['up'][2]) + '%' + ' 🌳 ' + str(country6['eco'][2]) + '%',
+                 'Четвертый город': '⚙️' + str(country6['up'][3]) + '%' + ' 🌳 ' + str(country6['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country6},
                 {'Страна': 'Турция',
-                 'Первый город': '⚙️' + str(country4['up1']) + '%' + ' 🌳 ' + str(country4['eco1']) + '%',
-                 'Второй город': '⚙️' + str(country4['up2']) + '%' + ' 🌳 ' + str(country4['eco2']) + '%',
-                 'Третий город': '⚙️' + str(country4['up3']) + '%' + ' 🌳 ' + str(country4['eco3']) + '%',
-                 'Четвертый город': '⚙️' + str(country4['up4']) + '%' + ' 🌳 ' + str(country4['eco4']) + '%',
+                 'Первый город': '⚙️' + str(country4['up'][0]) + '%' + ' 🌳 ' + str(country4['eco'][0]) + '%',
+                 'Второй город': '⚙️' + str(country4['up'][1]) + '%' + ' 🌳 ' + str(country4['eco'][1]) + '%',
+                 'Третий город': '⚙️' + str(country4['up'][2]) + '%' + ' 🌳 ' + str(country4['eco'][2]) + '%',
+                 'Четвертый город': '⚙️' + str(country4['up'][3]) + '%' + ' 🌳 ' + str(country4['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country4},
                 {'Страна': 'Япония',
-                 'Первый город': '⚙️' + str(country5['up1']) + '%' + ' 🌳 ' + str(country5['eco1']) + '%',
-                 'Второй город': '⚙️' + str(country5['up2']) + '%' + ' 🌳 ' + str(country5['eco2']) + '%',
-                 'Третий город': '⚙️' + str(country5['up3']) + '%' + ' 🌳 ' + str(country5['eco3']) + '%',
-                 'Четвертый город': '⚙️' + str(country5['up4']) + '%' + ' 🌳 ' + str(country5['eco4']) + '%',
+                 'Первый город': '⚙️' + str(country5['up'][0]) + '%' + ' 🌳 ' + str(country5['eco'][0]) + '%',
+                 'Второй город': '⚙️' + str(country5['up'][1]) + '%' + ' 🌳 ' + str(country5['eco'][1]) + '%',
+                 'Третий город': '⚙️' + str(country5['up'][2]) + '%' + ' 🌳 ' + str(country5['eco'][2]) + '%',
+                 'Четвертый город': '⚙️' + str(country5['up'][3]) + '%' + ' 🌳 ' + str(country5['eco'][3]) + '%',
                  'Средний уровень жизни': sr_country5}
             ]
         )
